@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "BTFontBd";
+  src: url("./fonts//BTFont_1.001/Desktop/BTFont_Bd.ttf") format("ttf"),
+    url("./fonts//BTFont_1.001/Web/EOT/BTFont_W_Bd.eot") format("eot"),
+    url("./fonts//BTFont_1.001/Web/WOFF/BTFont_W_Bd.woff") format("woff"),
+    url("./fonts//BTFont_1.001/Web/WOFF2/BTFont_W_Bd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BTFontExBd";
+  src: url("./fonts//BTFont_1.001/Desktop/BTFont_ExBd.ttf") format("ttf"),
+    url("./fonts//BTFont_1.001/Web/EOT/BTFont_W_ExBd.eot") format("eot"),
+    url("./fonts//BTFont_1.001/Web/WOFF/BTFont_W_ExBd.woff") format("woff"),
+    url("./fonts//BTFont_1.001/Web/WOFF2/BTFont_W_ExBd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BTFontLt";
+  src: url("./fonts//BTFont_1.001/Desktop/BTFont_Lt.ttf") format("ttf"),
+    url("./fonts//BTFont_1.001/Web/EOT/BTFont_W_Lt.eot") format("eot"),
+    url("./fonts//BTFont_1.001/Web/WOFF/BTFont_W_Lt.woff") format("woff"),
+    url("./fonts//BTFont_1.001/Web/WOFF2/BTFont_W_Lt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BTFontRg";
+  src: url("./fonts//BTFont_1.001/Desktop/BTFont_Rg.ttf") format("ttf"),
+    url("./fonts//BTFont_1.001/Web/EOT/BTFont_W_Rg.eot") format("eot"),
+    url("./fonts//BTFont_1.001/Web/WOFF/BTFont_W_Rg.woff") format("woff"),
+    url("./fonts//BTFont_1.001/Web/WOFF2/BTFont_W_Rg.woff2") format("woff2");
+}
+
+html body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "BTFontRg";
+}
+
+.bt-primary-pink {
+  background-color: #e60050;
+  color: #ffffff;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+  cursor: pointer;
+  border: none;
+}
+
+.bt-primary-pink:hover {
+  background-color: #c30d4c;
+}
+
+.bt-secondary-pink {
+  background-color: #ffffff;
+  border: 1px solid #e60050;
+  outline: none;
+  color: #e60050;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+}
+
+.bt-secondary-pink:hover {
+  background-color: #d3d3d3;
+}
+
+.bt-primary-purple {
+  background-color: #6400aa;
+  color: #ffffff;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+}
+
+.bt-primary-purple:hover {
+  background-color: #540e85;
+}
+
+.bt-secondary-purple {
+  background-color: #ffffff;
+  border: 1px solid #6400aa;
+  outline: none;
+  color: #6400aa;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+}
+
+.bt-secondary-purple:hover {
+  background-color: #d3d3d3;
+}
+
+/* Overwrites sweetalert popup library values for buttons */
+.swal-button--confirm {
+  border: none;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.swal-button--confirm.bt-primary-purple:not([disabled]):hover {
+  background-color: #540e85;
+}
+
+.swal-button--cancel {
+  border: 1px solid #6400aa;
+  outline: none;
+  color: #6400aa;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.swal-button--cancel.bt-secondary-purple:not([disabled]):hover {
+  background-color: #f3f3f3;
+  color: #6400aa;
+  text-decoration: none;
+  border: 1px solid #6400aa;
+}
+
+.swal-button--confirm:focus {
+  box-shadow: none;
+}
+
+.swal-button--cancel:focus {
+  box-shadow: none;
+}
+
+//tooltip styles
+.settings-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  height: 15px;
+  padding-left: 10px;
+  font-size: 13px;
+  background: #fff;
+  border-radius: 4px;
+
+  .formEntryHelp {
+    visibility: hidden;
+    width: 90%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 15%;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+
+  &:hover .formEntryHelp {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.settings-input {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: #6400aa;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.settings-input:focus {
+  border-color: #6e8095;
+  outline: none;
+}
+
+.rc-time-picker-input {
+  width: 100%;
+  height: 25px !important;
+  padding-left: 10px !important;
+  font-size: 15px !important;
+  color: #6400aa !important;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/*Overwrites styling for dropdown values */
+.dropdown-input div{
+  font-size: 15px;
+  color: #6400aa;
+}
+
+/*Common Styling for busstop, school, fleet and pupil form start */
+
+.delete-button {
+  width: 45%;
+  height: 35px;
+  top: 37px;
+  transform: translateY(-37px);
+  right: 2px;
+  transform: translateX(-2px);
+  background-color: #E60050;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.delete-button:hover {background-color: #c30d4c}
+
+.delete-button:active {
+  background-color: #c30d4c;
+}
+
+.add-button {
+  width: 20%;
+  height: 35px;
+  top: 37px;
+  transform: translateY(-37px);
+  right: 2px;
+  transform: translateX(-2px);
+  background-color: #E60050;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.add-button:hover {background-color: #c30d4c}
+
+.add-button:active {
+  background-color: #c30d4c;
+}
+
+.edit-btn {
+  color: #333333;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+}
+.delete-btn {
+  margin-left: 18px;
+  color:#E60050;
+}
+
+.delete-btn:hover {
+  color: #c30d4c;
+  cursor: pointer;
+}
+
+#selected {
+  width: auto !important;
+  padding: 0 20px !important;
+}
+
+#record-add-button {
+  width: auto !important;
+  padding: 0 20px !important;
+  margin-left:10px;
+}
+
+.table-title-information {
+  font-size: 24px;
+}
+
+.import-csv:hover {
+  cursor: pointer;
+}
+
+.grid-container {
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.title-button {
+  text-align: left;
+}
+
+.csv-links {
+  text-align: right;
+}
+
+.title-section {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.rt-tr, .pagination-bottom {
+  line-height: 1;
+}
+
+.csvPosition {
+  padding-right: 25px;
+}
+/*Common Styling for busstop, school, fleet and pupil form end */
+.text-muted {
+  font: 400 16px "BTFontRg";
+  color: #212529 !important;
+}
+
+.enabled-save-button {
+  width: 45% !important;
+  height: 35px;
+  top: 37px;
+  transform: translateY(-37px);
+  right: 2px;
+  transform: translateX(-2px);
+  background-color: #E60050 !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0 !important;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+}
+.enabled-save-button:hover {background-color: #C30D4C !important}
+
+.enabled-save-button:active {
+  background-color: #C30D4C !important;
+}
+
+.enabled-reset-button {
+  width: 45% !important;
+  height: 35px;
+  top: 37px;
+  transform: translateY(-37px);
+  right: 2px;
+  transform: translateX(-2px);
+  background-color: white !important;
+  color: #E60050 !important;
+  border: 1px solid #E60050 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0 !important;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+}
+.enabled-reset-button:hover {background-color: #D3D3D3 !important}
+
+.enabled-reset-button:active {
+  background-color: #C0C0C0 !important;
+}
+
+.disabled-button {
+  width: 50%;
+  height: 35px;
+  top: 37px;
+  transform: translateY(-37px);
+  right: 2px;
+  transform: translateX(-2px);
+  background-color: grey;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+}
