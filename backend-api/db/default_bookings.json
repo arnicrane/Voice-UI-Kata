@@ -1,0 +1,22 @@
+{
+  "bookings": [
+    {
+      "roomNumber": 1,
+      "duration": "14 days",
+      "residentCount": 4,
+      "cardHolder": "Friedrich Joussen"
+    },
+    {
+      "roomNumber": 2,
+      "duration": "5 days",
+      "residentCount": 2,
+      "cardHolder": "Frank Rosenberger"
+    },
+    {
+      "roomNumber": 3,
+      "duration": "11 days",
+      "residentCount": 5,
+      "cardHolder": "Arnold Samson"
+    }
+  ]
+}
