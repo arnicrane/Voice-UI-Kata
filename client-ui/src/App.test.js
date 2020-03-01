@@ -2,6 +2,8 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 
+// TODO: Add more tests
+
 describe("App mounting and routing", () => {
   it("renders the HeaderBar child component by default", () => {
     const appComponent = shallow(<App />);

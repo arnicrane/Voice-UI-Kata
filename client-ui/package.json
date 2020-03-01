@@ -55,6 +55,7 @@
 		"react-dom": "^16.4.1",
 		"react-error-overlay": "^1.0.10",
 		"react-router-dom": "^4.3.1",
+		"react-speech-recognition": "^2.0.4",
 		"reactstrap": "^6.5.0",
 		"sass-loader": "^6.0.6",
 		"style-loader": "0.18.2",
