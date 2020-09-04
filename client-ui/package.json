@@ -44,7 +44,7 @@
 		"node-sass": "^4.5.3",
 		"object-assign": "4.1.1",
 		"ol": "^5.0.0",
-		"papaparse": "^4.6.2",
+		"papaparse": "^5.2.0",
 		"postcss-flexbugs-fixes": "3.2.0",
 		"postcss-loader": "2.0.6",
 		"promise": "8.0.1",
