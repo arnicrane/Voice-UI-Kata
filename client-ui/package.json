@@ -41,7 +41,7 @@
 		"less-loader": "^4.0.5",
 		"match-sorter": "^2.3.0",
 		"moment": "^2.22.2",
-		"node-sass": "^4.5.3",
+		"node-sass": "^7.0.0",
 		"object-assign": "4.1.1",
 		"ol": "^5.0.0",
 		"papaparse": "^4.6.2",
